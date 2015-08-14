@@ -1,5 +1,5 @@
 
-# iOS autocomplete
+# iOS image manager
 An iOS module providing image manipulation features.
 
 # About this project
