@@ -2,9 +2,7 @@
 //  AddPhotoViewController.swift
 //  ImageManager
 //
-//  Created by Norbert Agoston on 24/07/15.
-//  Copyright (c) 2015 Flaviu Silaghi. All rights reserved.
-//
+
 
 import UIKit
 import Photos

@@ -2,9 +2,7 @@
 //  ImageManagerTests.swift
 //  ImageManagerTests
 //
-//  Created by Flaviu Silaghi on 20/07/15.
-//  Copyright (c) 2015 Flaviu Silaghi. All rights reserved.
-//
+
 
 import UIKit
 import XCTest
