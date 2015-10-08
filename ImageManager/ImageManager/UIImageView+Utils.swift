@@ -2,9 +2,7 @@
 //  UIImageView+Utils.swift
 //  ImageManager
 //
-//  Created by Norbert Agoston on 22/07/15.
-//  Copyright (c) 2015 Flaviu Silaghi. All rights reserved.
-//
+
 
 import UIKit
 
