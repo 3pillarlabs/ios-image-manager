@@ -18,11 +18,8 @@ class AddPhotoViewController: UIViewController,UIImagePickerControllerDelegate,U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initImagePicker()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        
+        picker.delegate = self
     }
     
     //MARK: - private
@@ -74,10 +71,6 @@ class AddPhotoViewController: UIViewController,UIImagePickerControllerDelegate,U
         return cancelAction
     }
     
-    func initImagePicker() {
-        picker.delegate = self
-    }
-    
     func showPickerWithSourceTypeLibrary() {
         PHPhotoLibrary.requestAuthorization { (status:PHAuthorizationStatus) -> Void in
             switch status {
@@ -92,7 +85,7 @@ class AddPhotoViewController: UIViewController,UIImagePickerControllerDelegate,U
     }
     
     func showPickerWithSourceTypeCamera() {
-        let status: AVAuthorizationStatus = AVCaptureDevice.authorizationStatusForMediaType(AVMediaTypeVideo)
+        let status = AVCaptureDevice.authorizationStatusForMediaType(AVMediaTypeVideo)
         switch status {
         case .Authorized:
             self.launchCameraIfTheDeviceHasOne()
@@ -111,13 +104,12 @@ class AddPhotoViewController: UIViewController,UIImagePickerControllerDelegate,U
     
     func launchCameraIfTheDeviceHasOne() {
         if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
-            self.picker.allowsEditing = false
-            self.picker.sourceType = UIImagePickerControllerSourceType.Camera
-            self.picker.cameraCaptureMode = .Photo
-            self.navigationController!.presentViewController(self.picker, animated: true, completion: nil)
+            picker.allowsEditing = false
+            picker.sourceType = .Camera
+            picker.cameraCaptureMode = .Photo
+            navigationController!.presentViewController(picker, animated: true, completion: nil)
         } else {
-            println("no camera")
-            self.noCamera()
+            noCamera()
         }
     }
     
@@ -129,20 +121,20 @@ class AddPhotoViewController: UIViewController,UIImagePickerControllerDelegate,U
     
     func noCamera(){
         let alertVC = UIAlertController(title: "No Camera", message: "Sorry, this device has no camera", preferredStyle: .Alert)
-        let okAction = UIAlertAction(title: "OK", style:.Default, handler: nil)
+        let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
         alertVC.addAction(okAction)
         presentViewController(alertVC, animated: true, completion: nil)
     }
     
     func showNoLibraryPermissionsMessage(){
-        let alert = UIAlertController (title:"Error launching photo library", message: "Permissions not granted", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        let alert = UIAlertController (title:"Error launching photo library", message: "Permissions not granted", preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
     func showNoCameraPermissionsMessage() {
-        let alert = UIAlertController (title:"Error launching camera", message: "Permissions not granted", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        let alert = UIAlertController (title:"Error launching camera", message: "Permissions not granted", preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
@@ -154,8 +146,8 @@ class AddPhotoViewController: UIViewController,UIImagePickerControllerDelegate,U
     
     //MARK: - ImagePicker Delegate methods
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-        var chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         dismissViewControllerAnimated(true) { () -> Void in
             self.launchImageManagerWithImage(chosenImage)
         }
