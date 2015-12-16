@@ -15,10 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
-        var mainViewController = AddPhotoViewController(nibName: "AddPhotoViewController", bundle: nil)
-        var nvc = UINavigationController(rootViewController: mainViewController)
-        nvc.navigationBarHidden = true
-        window?.rootViewController = nvc
+        let mainViewController = AddPhotoViewController(nibName: "AddPhotoViewController", bundle: nil)
+        let navigationController = UINavigationController(rootViewController: mainViewController)
+        navigationController.navigationBarHidden = true
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         return true
     }

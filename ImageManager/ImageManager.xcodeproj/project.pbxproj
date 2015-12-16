@@ -137,7 +137,7 @@
 				1B5AC8B61B5E366D000A341E /* ImageManagerViewController.swift */,
 				B581B6411B60D75100A7E9AA /* ImageManagerViewController.xib */,
 			);
-			name = "Image Manager";
+			path = "Image Manager";
 			sourceTree = "<group>";
 		};
 		1B55175F1B60C3ED003F8072 /* Resources */ = {
@@ -164,7 +164,7 @@
 				C9E34A5B1B6237A90071B6DC /* AddPhotoViewController.swift */,
 				C9E34A5D1B6237BA0071B6DC /* AddPhotoViewController.xib */,
 			);
-			name = AddPhotoScreen;
+			path = AddPhotoScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,7 +211,8 @@
 		1B44F94E1B5D1D65001F1204 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = 3PillarGlobal;
 				TargetAttributes = {
 					1B44F9551B5D1D65001F1204 = {
@@ -329,6 +330,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -399,6 +401,7 @@
 				INFOPLIST_FILE = ImageManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.3Pillar.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -412,6 +415,7 @@
 				INFOPLIST_FILE = ImageManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.3Pillar.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -431,6 +435,7 @@
 				);
 				INFOPLIST_FILE = ImageManagerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.3pillar.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageManager.app/ImageManager";
 			};
@@ -446,6 +451,7 @@
 				);
 				INFOPLIST_FILE = ImageManagerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.3pillar.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageManager.app/ImageManager";
 			};
