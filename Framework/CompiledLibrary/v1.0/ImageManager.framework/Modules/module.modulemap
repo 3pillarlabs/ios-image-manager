@@ -1,0 +1,10 @@
+framework module ImageManager {
+  umbrella header "ImageManager.h"
+
+  export *
+  module * { export * }
+}
+
+module ImageManager.Swift {
+    header "ImageManager-Swift.h"
+}

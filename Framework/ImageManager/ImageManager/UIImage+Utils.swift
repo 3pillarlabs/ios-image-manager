@@ -37,10 +37,6 @@ extension UIImage {
     }
     
     public func normalizedImage() -> UIImage {
-        if imageOrientation == .Up {
-            return self
-        }
-        
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
         drawInRect(CGRectMake(0, 0, size.width, size.height))
         let normalizedImage = UIGraphicsGetImageFromCurrentImageContext()

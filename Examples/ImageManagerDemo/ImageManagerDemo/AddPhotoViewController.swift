@@ -7,6 +7,7 @@
 import UIKit
 import Photos
 import AVFoundation
+import ImageManager
 
 class AddPhotoViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
@@ -114,7 +115,7 @@ class AddPhotoViewController: UIViewController,UIImagePickerControllerDelegate,U
     }
     
     func launchImageManagerWithImage(image : UIImage) {
-        let imageManagerVc = ImageManagerViewController(nibName: "ImageManagerViewController", bundle: nil)
+        let imageManagerVc = ImageManagerViewController()
         imageManagerVc.displayedImage = image
         self.navigationController?.pushViewController(imageManagerVc, animated: true)
     }
