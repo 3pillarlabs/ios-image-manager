@@ -10,15 +10,13 @@
 		1B44F95C1B5D1D66001F1204 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B44F95B1B5D1D66001F1204 /* AppDelegate.swift */; };
 		1B44F9631B5D1D66001F1204 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B44F9621B5D1D66001F1204 /* Images.xcassets */; };
 		1B44F9661B5D1D66001F1204 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B44F9641B5D1D66001F1204 /* LaunchScreen.xib */; };
-		1B44F9721B5D1D66001F1204 /* ImageManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B44F9711B5D1D66001F1204 /* ImageManagerTests.swift */; };
-		1B44F97C1B5D1DE9001F1204 /* UIImage+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B44F97B1B5D1DE9001F1204 /* UIImage+Utils.swift */; };
-		1B44F97E1B5D1FF2001F1204 /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1B44F97D1B5D1FF2001F1204 /* image.jpg */; };
+		1B44F9721B5D1D66001F1204 /* ImageManagerDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B44F9711B5D1D66001F1204 /* ImageManagerDemoTests.swift */; };
 		1B5517611B60C662003F8072 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B5517601B60C662003F8072 /* Photos.framework */; };
-		1B5AC8B71B5E366D000A341E /* ImageManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5AC8B61B5E366D000A341E /* ImageManagerViewController.swift */; };
-		B581B6421B60D75100A7E9AA /* ImageManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B581B6411B60D75100A7E9AA /* ImageManagerViewController.xib */; };
-		C9A5E7A01B5FE057005D1648 /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A5E79F1B5FE057005D1648 /* UIImageView+Utils.swift */; };
-		C9E34A5C1B6237A90071B6DC /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E34A5B1B6237A90071B6DC /* AddPhotoViewController.swift */; };
-		C9E34A5E1B6237BA0071B6DC /* AddPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9E34A5D1B6237BA0071B6DC /* AddPhotoViewController.xib */; };
+		B5F967021C243E5B005F5381 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F967001C243E5B005F5381 /* AddPhotoViewController.swift */; };
+		B5F967031C243E5B005F5381 /* AddPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F967011C243E5B005F5381 /* AddPhotoViewController.xib */; };
+		B5F967111C24439F005F5381 /* ImageManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F967101C24439F005F5381 /* ImageManager.framework */; };
+		B5F967121C2443C3005F5381 /* ImageManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F967101C24439F005F5381 /* ImageManager.framework */; };
+		B5F967131C2443C3005F5381 /* ImageManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5F967101C24439F005F5381 /* ImageManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C9E34A601B626AB70071B6DC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E34A5F1B626AB70071B6DC /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,23 +30,33 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B5F967071C243EC1005F5381 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B5F967131C2443C3005F5381 /* ImageManager.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		1B44F9561B5D1D65001F1204 /* ImageManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B44F9561B5D1D65001F1204 /* ImageManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B44F95A1B5D1D65001F1204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B44F95B1B5D1D66001F1204 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B44F9621B5D1D66001F1204 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1B44F9651B5D1D66001F1204 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		1B44F96B1B5D1D66001F1204 /* ImageManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B44F96B1B5D1D66001F1204 /* ImageManagerDemo.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageManagerDemo.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B44F9701B5D1D66001F1204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B44F9711B5D1D66001F1204 /* ImageManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManagerTests.swift; sourceTree = "<group>"; };
-		1B44F97B1B5D1DE9001F1204 /* UIImage+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Utils.swift"; sourceTree = "<group>"; };
-		1B44F97D1B5D1FF2001F1204 /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
+		1B44F9711B5D1D66001F1204 /* ImageManagerDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManagerDemoTests.swift; sourceTree = "<group>"; };
 		1B5517601B60C662003F8072 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
-		1B5AC8B61B5E366D000A341E /* ImageManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManagerViewController.swift; sourceTree = "<group>"; };
-		B581B6411B60D75100A7E9AA /* ImageManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageManagerViewController.xib; sourceTree = "<group>"; };
-		C9A5E79F1B5FE057005D1648 /* UIImageView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
-		C9E34A5B1B6237A90071B6DC /* AddPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
-		C9E34A5D1B6237BA0071B6DC /* AddPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPhotoViewController.xib; sourceTree = "<group>"; };
+		B5F967001C243E5B005F5381 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
+		B5F967011C243E5B005F5381 /* AddPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPhotoViewController.xib; sourceTree = "<group>"; };
+		B5F967101C24439F005F5381 /* ImageManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImageManager.framework; sourceTree = "<group>"; };
 		C9E34A5F1B626AB70071B6DC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -57,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F967121C2443C3005F5381 /* ImageManager.framework in Frameworks */,
+				B5F967111C24439F005F5381 /* ImageManager.framework in Frameworks */,
 				C9E34A601B626AB70071B6DC /* AVFoundation.framework in Frameworks */,
 				1B5517611B60C662003F8072 /* Photos.framework in Frameworks */,
 			);
@@ -75,8 +85,8 @@
 		1B44F94D1B5D1D65001F1204 = {
 			isa = PBXGroup;
 			children = (
-				1B44F9581B5D1D65001F1204 /* ImageManager */,
-				1B44F96E1B5D1D66001F1204 /* ImageManagerTests */,
+				1B44F9581B5D1D65001F1204 /* ImageManagerDemo */,
+				1B44F96E1B5D1D66001F1204 /* ImageManagerDemoTests */,
 				1B5517621B60C675003F8072 /* Frameworks */,
 				1B44F9571B5D1D65001F1204 /* Products */,
 			);
@@ -85,23 +95,23 @@
 		1B44F9571B5D1D65001F1204 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1B44F9561B5D1D65001F1204 /* ImageManager.app */,
-				1B44F96B1B5D1D66001F1204 /* ImageManagerTests.xctest */,
+				1B44F9561B5D1D65001F1204 /* ImageManagerDemo.app */,
+				1B44F96B1B5D1D66001F1204 /* ImageManagerDemo.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1B44F9581B5D1D65001F1204 /* ImageManager */ = {
+		1B44F9581B5D1D65001F1204 /* ImageManagerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				C9E34A5A1B62373B0071B6DC /* AddPhotoScreen */,
-				1B55175E1B60C3CE003F8072 /* Image Manager */,
+				B5F967001C243E5B005F5381 /* AddPhotoViewController.swift */,
+				B5F967011C243E5B005F5381 /* AddPhotoViewController.xib */,
 				1B44F95B1B5D1D66001F1204 /* AppDelegate.swift */,
 				1B44F9641B5D1D66001F1204 /* LaunchScreen.xib */,
 				1B55175F1B60C3ED003F8072 /* Resources */,
 				1B44F9591B5D1D65001F1204 /* Supporting Files */,
 			);
-			path = ImageManager;
+			path = ImageManagerDemo;
 			sourceTree = "<group>";
 		};
 		1B44F9591B5D1D65001F1204 /* Supporting Files */ = {
@@ -112,13 +122,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1B44F96E1B5D1D66001F1204 /* ImageManagerTests */ = {
+		1B44F96E1B5D1D66001F1204 /* ImageManagerDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				1B44F9711B5D1D66001F1204 /* ImageManagerTests.swift */,
+				1B44F9711B5D1D66001F1204 /* ImageManagerDemoTests.swift */,
 				1B44F96F1B5D1D66001F1204 /* Supporting Files */,
 			);
-			path = ImageManagerTests;
+			path = ImageManagerDemoTests;
 			sourceTree = "<group>";
 		};
 		1B44F96F1B5D1D66001F1204 /* Supporting Files */ = {
@@ -129,22 +139,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1B55175E1B60C3CE003F8072 /* Image Manager */ = {
-			isa = PBXGroup;
-			children = (
-				C9A5E79F1B5FE057005D1648 /* UIImageView+Utils.swift */,
-				1B44F97B1B5D1DE9001F1204 /* UIImage+Utils.swift */,
-				1B5AC8B61B5E366D000A341E /* ImageManagerViewController.swift */,
-				B581B6411B60D75100A7E9AA /* ImageManagerViewController.xib */,
-			);
-			path = "Image Manager";
-			sourceTree = "<group>";
-		};
 		1B55175F1B60C3ED003F8072 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				1B44F9621B5D1D66001F1204 /* Images.xcassets */,
-				1B44F97D1B5D1FF2001F1204 /* image.jpg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -152,44 +150,37 @@
 		1B5517621B60C675003F8072 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5F967101C24439F005F5381 /* ImageManager.framework */,
 				C9E34A5F1B626AB70071B6DC /* AVFoundation.framework */,
 				1B5517601B60C662003F8072 /* Photos.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C9E34A5A1B62373B0071B6DC /* AddPhotoScreen */ = {
-			isa = PBXGroup;
-			children = (
-				C9E34A5B1B6237A90071B6DC /* AddPhotoViewController.swift */,
-				C9E34A5D1B6237BA0071B6DC /* AddPhotoViewController.xib */,
-			);
-			path = AddPhotoScreen;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1B44F9551B5D1D65001F1204 /* ImageManager */ = {
+		1B44F9551B5D1D65001F1204 /* ImageManagerDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1B44F9751B5D1D66001F1204 /* Build configuration list for PBXNativeTarget "ImageManager" */;
+			buildConfigurationList = 1B44F9751B5D1D66001F1204 /* Build configuration list for PBXNativeTarget "ImageManagerDemo" */;
 			buildPhases = (
 				1B44F9521B5D1D65001F1204 /* Sources */,
 				1B44F9531B5D1D65001F1204 /* Frameworks */,
 				1B44F9541B5D1D65001F1204 /* Resources */,
+				B5F967071C243EC1005F5381 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ImageManager;
+			name = ImageManagerDemo;
 			productName = ImageManager;
-			productReference = 1B44F9561B5D1D65001F1204 /* ImageManager.app */;
+			productReference = 1B44F9561B5D1D65001F1204 /* ImageManagerDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1B44F96A1B5D1D66001F1204 /* ImageManagerTests */ = {
+		1B44F96A1B5D1D66001F1204 /* ImageManagerDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1B44F9781B5D1D66001F1204 /* Build configuration list for PBXNativeTarget "ImageManagerTests" */;
+			buildConfigurationList = 1B44F9781B5D1D66001F1204 /* Build configuration list for PBXNativeTarget "ImageManagerDemoTests" */;
 			buildPhases = (
 				1B44F9671B5D1D66001F1204 /* Sources */,
 				1B44F9681B5D1D66001F1204 /* Frameworks */,
@@ -200,9 +191,9 @@
 			dependencies = (
 				1B44F96D1B5D1D66001F1204 /* PBXTargetDependency */,
 			);
-			name = ImageManagerTests;
+			name = ImageManagerDemoTests;
 			productName = ImageManagerTests;
-			productReference = 1B44F96B1B5D1D66001F1204 /* ImageManagerTests.xctest */;
+			productReference = 1B44F96B1B5D1D66001F1204 /* ImageManagerDemo.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -225,7 +216,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1B44F9511B5D1D65001F1204 /* Build configuration list for PBXProject "ImageManager" */;
+			buildConfigurationList = 1B44F9511B5D1D65001F1204 /* Build configuration list for PBXProject "ImageManagerDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -238,8 +229,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1B44F9551B5D1D65001F1204 /* ImageManager */,
-				1B44F96A1B5D1D66001F1204 /* ImageManagerTests */,
+				1B44F9551B5D1D65001F1204 /* ImageManagerDemo */,
+				1B44F96A1B5D1D66001F1204 /* ImageManagerDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -249,11 +240,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B581B6421B60D75100A7E9AA /* ImageManagerViewController.xib in Resources */,
 				1B44F9661B5D1D66001F1204 /* LaunchScreen.xib in Resources */,
+				B5F967031C243E5B005F5381 /* AddPhotoViewController.xib in Resources */,
 				1B44F9631B5D1D66001F1204 /* Images.xcassets in Resources */,
-				1B44F97E1B5D1FF2001F1204 /* image.jpg in Resources */,
-				C9E34A5E1B6237BA0071B6DC /* AddPhotoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,11 +260,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B5AC8B71B5E366D000A341E /* ImageManagerViewController.swift in Sources */,
 				1B44F95C1B5D1D66001F1204 /* AppDelegate.swift in Sources */,
-				C9E34A5C1B6237A90071B6DC /* AddPhotoViewController.swift in Sources */,
-				C9A5E7A01B5FE057005D1648 /* UIImageView+Utils.swift in Sources */,
-				1B44F97C1B5D1DE9001F1204 /* UIImage+Utils.swift in Sources */,
+				B5F967021C243E5B005F5381 /* AddPhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B44F9721B5D1D66001F1204 /* ImageManagerTests.swift in Sources */,
+				1B44F9721B5D1D66001F1204 /* ImageManagerDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +278,7 @@
 /* Begin PBXTargetDependency section */
 		1B44F96D1B5D1D66001F1204 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1B44F9551B5D1D65001F1204 /* ImageManager */;
+			target = 1B44F9551B5D1D65001F1204 /* ImageManagerDemo */;
 			targetProxy = 1B44F96C1B5D1D66001F1204 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -398,11 +384,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = ImageManager/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/ImageManagerDemo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.3Pillar.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ImageManagerDemo;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -412,11 +402,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
-				INFOPLIST_FILE = ImageManager/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/ImageManagerDemo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.3Pillar.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ImageManagerDemo;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -436,8 +430,8 @@
 				INFOPLIST_FILE = ImageManagerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.3pillar.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageManager.app/ImageManager";
+				PRODUCT_NAME = ImageManagerDemo;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageManagerDemo.app/ImageManagerDemo";
 			};
 			name = Debug;
 		};
@@ -452,15 +446,15 @@
 				INFOPLIST_FILE = ImageManagerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.3pillar.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageManager.app/ImageManager";
+				PRODUCT_NAME = ImageManagerDemo;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageManagerDemo.app/ImageManagerDemo";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1B44F9511B5D1D65001F1204 /* Build configuration list for PBXProject "ImageManager" */ = {
+		1B44F9511B5D1D65001F1204 /* Build configuration list for PBXProject "ImageManagerDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1B44F9731B5D1D66001F1204 /* Debug */,
@@ -469,7 +463,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1B44F9751B5D1D66001F1204 /* Build configuration list for PBXNativeTarget "ImageManager" */ = {
+		1B44F9751B5D1D66001F1204 /* Build configuration list for PBXNativeTarget "ImageManagerDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1B44F9761B5D1D66001F1204 /* Debug */,
@@ -478,7 +472,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1B44F9781B5D1D66001F1204 /* Build configuration list for PBXNativeTarget "ImageManagerTests" */ = {
+		1B44F9781B5D1D66001F1204 /* Build configuration list for PBXNativeTarget "ImageManagerDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1B44F9791B5D1D66001F1204 /* Debug */,

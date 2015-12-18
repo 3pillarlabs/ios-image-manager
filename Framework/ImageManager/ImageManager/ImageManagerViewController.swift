@@ -7,22 +7,37 @@
 import UIKit
 import Photos
 
-protocol ImageManagerDelegate {
+public protocol ImageManagerDelegate {
     func imageManagerController(controller:ImageManagerViewController, didFinishEditingImage image:UIImage)
     func imageManagerControllerDidCancel(controller:ImageManagerViewController)
 }
 
-class ImageManagerViewController: UIViewController {
+public class ImageManagerViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var croppingView: UIView!
     
-    var delegate: ImageManagerDelegate?
-    var displayedImage : UIImage?
+   public var delegate: ImageManagerDelegate?
+   public var displayedImage : UIImage?
     
     //MARK: - View Life Cycle
     
-    override func viewDidLoad() {
+    required public init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+
+    convenience init() {
+        let frameworkBundleID = "-PG.ImageManager"
+        let bundle = NSBundle(identifier: frameworkBundleID)
+        self.init(nibName: "ImageManagerViewController", bundle: bundle)
+    }
+    
+    public override func viewDidLoad() {
         super.viewDidLoad()
         setupImageView()
         setupCroppingView()
@@ -208,7 +223,7 @@ class ImageManagerViewController: UIViewController {
 
 extension ImageManagerViewController:UIGestureRecognizerDelegate {
     
-    func gestureRecognizer(gestureRecognizer:UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer:UIGestureRecognizer) -> Bool {
+    public func gestureRecognizer(gestureRecognizer:UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer:UIGestureRecognizer) -> Bool {
         return true
     }
 }
