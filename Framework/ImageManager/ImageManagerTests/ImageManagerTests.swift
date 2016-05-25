@@ -2,10 +2,12 @@
 //  ImageManagerTests.swift
 //  ImageManagerTests
 //
+//  Created by Valentina Iancu on 16/12/15.
+//  Copyright © 2015 3Pillar Global. All rights reserved.
+//
 
-
-import UIKit
 import XCTest
+@testable import ImageManager
 
 class ImageManagerTests: XCTestCase {
     
@@ -21,12 +23,12 @@ class ImageManagerTests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock() {
+        self.measureBlock {
             // Put the code you want to measure the time of here.
         }
     }
