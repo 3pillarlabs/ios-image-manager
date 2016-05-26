@@ -12,11 +12,10 @@
 		1B44F9661B5D1D66001F1204 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B44F9641B5D1D66001F1204 /* LaunchScreen.xib */; };
 		1B44F9721B5D1D66001F1204 /* ImageManagerDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B44F9711B5D1D66001F1204 /* ImageManagerDemoTests.swift */; };
 		1B5517611B60C662003F8072 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B5517601B60C662003F8072 /* Photos.framework */; };
+		B57005131CF6F83C00E0C97A /* ImageManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B57005121CF6F83C00E0C97A /* ImageManager.framework */; };
+		B57005141CF6F83C00E0C97A /* ImageManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B57005121CF6F83C00E0C97A /* ImageManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B5F967021C243E5B005F5381 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F967001C243E5B005F5381 /* AddPhotoViewController.swift */; };
 		B5F967031C243E5B005F5381 /* AddPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F967011C243E5B005F5381 /* AddPhotoViewController.xib */; };
-		B5F967111C24439F005F5381 /* ImageManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F967101C24439F005F5381 /* ImageManager.framework */; };
-		B5F967121C2443C3005F5381 /* ImageManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F967101C24439F005F5381 /* ImageManager.framework */; };
-		B5F967131C2443C3005F5381 /* ImageManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5F967101C24439F005F5381 /* ImageManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C9E34A601B626AB70071B6DC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E34A5F1B626AB70071B6DC /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +36,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B5F967131C2443C3005F5381 /* ImageManager.framework in Embed Frameworks */,
+				B57005141CF6F83C00E0C97A /* ImageManager.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,9 +53,9 @@
 		1B44F9701B5D1D66001F1204 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B44F9711B5D1D66001F1204 /* ImageManagerDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManagerDemoTests.swift; sourceTree = "<group>"; };
 		1B5517601B60C662003F8072 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		B57005121CF6F83C00E0C97A /* ImageManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImageManager.framework; sourceTree = "<group>"; };
 		B5F967001C243E5B005F5381 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
 		B5F967011C243E5B005F5381 /* AddPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPhotoViewController.xib; sourceTree = "<group>"; };
-		B5F967101C24439F005F5381 /* ImageManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImageManager.framework; sourceTree = "<group>"; };
 		C9E34A5F1B626AB70071B6DC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -65,8 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5F967121C2443C3005F5381 /* ImageManager.framework in Frameworks */,
-				B5F967111C24439F005F5381 /* ImageManager.framework in Frameworks */,
+				B57005131CF6F83C00E0C97A /* ImageManager.framework in Frameworks */,
 				C9E34A601B626AB70071B6DC /* AVFoundation.framework in Frameworks */,
 				1B5517611B60C662003F8072 /* Photos.framework in Frameworks */,
 			);
@@ -150,7 +148,7 @@
 		1B5517621B60C675003F8072 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B5F967101C24439F005F5381 /* ImageManager.framework */,
+				B57005121CF6F83C00E0C97A /* ImageManager.framework */,
 				C9E34A5F1B626AB70071B6DC /* AVFoundation.framework */,
 				1B5517601B60C662003F8072 /* Photos.framework */,
 			);
