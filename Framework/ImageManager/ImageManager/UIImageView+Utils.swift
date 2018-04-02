@@ -27,6 +27,7 @@ extension UIImageView {
             w = frame.size.width / heightScale
             h = frame.size.height / heightScale
         }
-        return CGRectMake(x, y, w, h)
+
+        return CGRect(x: x, y: y, width: w, height: h)
     }
 }

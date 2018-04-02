@@ -6,29 +6,32 @@
 import UIKit
 
 extension UIImage {
-    public func imageRotatedByDegrees(degrees: CGFloat) -> UIImage {
+    public func imageRotatedByDegrees(degrees: CGFloat) -> UIImage? {
         
         let degreesToRadians: (CGFloat) -> CGFloat = {
-            return $0 / 180.0 * CGFloat(M_PI)
+            return $0 / 180.0 * CGFloat(Float.pi)
         }
         
-        let nImage = normalizedImage()
-        
-        let rotatedSize = CGSizeMake(nImage.size.height, nImage.size.width)
+        guard let nImage = normalizedImage() else { return nil }
+        guard let cgImage = nImage.cgImage else { return nil }
+        let rotatedSize = CGSize(width: nImage.size.height, height: nImage.size.width)
         
         // Create the bitmap context
         UIGraphicsBeginImageContext(rotatedSize)
-        let bitmap = UIGraphicsGetCurrentContext()
+        guard let bitmap = UIGraphicsGetCurrentContext() else {
+            UIGraphicsEndImageContext()
+            return nil
+        }
         
         // Move the origin to the middle of the image so we will rotate and scale around the center.
-        CGContextTranslateCTM(bitmap, rotatedSize.width / 2.0, rotatedSize.height / 2.0);
+        bitmap.translateBy(x: rotatedSize.width / 2.0, y: rotatedSize.height / 2.0)
         
         //   // Rotate the image context
-        CGContextRotateCTM(bitmap, degreesToRadians(degrees))
+        bitmap.rotate(by: degreesToRadians(degrees))
         
         // Now, draw the rotated/scaled image into the context
-        CGContextScaleCTM(bitmap, 1, -1.0)
-        CGContextDrawImage(bitmap, CGRectMake(-size.width / 2, -size.height / 2, size.width, size.height), nImage.CGImage)
+        bitmap.scaleBy(x: 1, y: -1.0)
+        bitmap.draw(cgImage, in: CGRect(x: -size.width / 2, y: -size.height / 2, width: size.width, height: size.height))
         
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
@@ -36,18 +39,17 @@ extension UIImage {
         return newImage
     }
     
-    public func normalizedImage() -> UIImage {
+    public func normalizedImage() -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
-        drawInRect(CGRectMake(0, 0, size.width, size.height))
+        draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
         let normalizedImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return normalizedImage
     }
     
-    public func cropWithCroppingFrame(croppingFrame : CGRect) -> UIImage {
-        // Create a new UIImage
-        let imageRef = CGImageCreateWithImageInRect(CGImage, croppingFrame)!
-        let croppedImage = UIImage(CGImage: imageRef)
+    public func cropWithCroppingFrame(croppingFrame : CGRect) -> UIImage? {
+        guard let imageRef = self.cgImage?.cropping(to: croppingFrame) else { return nil }
+        let croppedImage = UIImage(cgImage: imageRef)
         return croppedImage
     }
 }
