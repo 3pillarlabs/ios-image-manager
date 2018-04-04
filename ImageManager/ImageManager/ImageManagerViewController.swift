@@ -43,6 +43,39 @@ public class ImageManagerViewController: UIViewController {
         
         initializeGestureRecognizers(targetView: imageView)
     }
+
+    //MARK: - Actions
+
+    @IBAction func cropAndSave(_ sender: Any) {
+        PHPhotoLibrary.requestAuthorization { (status:PHAuthorizationStatus) -> Void in
+            DispatchQueue.main.async() {
+                switch status {
+                case .authorized:
+                    self.saveImageToPhotoLibrary()
+                default:
+                    self.showErrorSavingImageMessage()
+                }
+            }
+        }
+    }
+
+    @IBAction func cancel(_ sender: Any) {
+        if let delegate = delegate {
+            delegate.imageManagerControllerDidCancel(controller: self)
+        }
+
+        dismissController()
+    }
+
+    func dismissController() {
+        if isModal() {
+            dismiss(animated: true, completion: nil)
+        }
+        else {
+            navigationController?.popViewController(animated: true)
+        }
+    }
+
     
     //MARK: - Private
     
@@ -107,39 +140,7 @@ public class ImageManagerViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
-    
-    //MARK: - Actions
-    
-    @IBAction func cropAndSaveAction(sender: AnyObject) {
-        PHPhotoLibrary.requestAuthorization { (status:PHAuthorizationStatus) -> Void in
-            DispatchQueue.main.async() {
-                switch status {
-                case .authorized:
-                    self.saveImageToPhotoLibrary()
-                default:
-                    self.showErrorSavingImageMessage()
-                }
-            }
-        }
-    }
-    
-    @IBAction func cancel(sender: AnyObject) {
-        if let delegate = delegate {
-            delegate.imageManagerControllerDidCancel(controller: self)
-        }
-        
-        dismissController()
-    }
-    
-    func dismissController() {
-        if isModal() {
-            dismiss(animated: true, completion: nil)
-        }
-        else {
-            navigationController?.popViewController(animated: true)
-        }
-    }
-    
+
     // MARK: - Gesture Handlers
     
     @objc func panAction(recognizer: UIPanGestureRecognizer) {
