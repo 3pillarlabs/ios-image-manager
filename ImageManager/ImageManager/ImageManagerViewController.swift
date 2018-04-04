@@ -179,7 +179,7 @@ public class ImageManagerViewController: UIViewController {
             let degreesToRadians: (CGFloat) -> CGFloat = {
                 return $0 / 180.0 * .pi
             }
-            
+
             UIView.animate(withDuration: 0.3, animations: { () -> Void in
                 let t = self.imageView.transform.rotated(by: degreesToRadians(angle))
                 self.imageView.transform = t

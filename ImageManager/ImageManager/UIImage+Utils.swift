@@ -9,7 +9,7 @@ extension UIImage {
     public func imageRotatedByDegrees(degrees: CGFloat) -> UIImage? {
         
         let degreesToRadians: (CGFloat) -> CGFloat = {
-            return $0 / 180.0 * CGFloat(Float.pi)
+            return $0 / 180.0 * .pi
         }
         
         guard let nImage = normalizedImage() else { return nil }

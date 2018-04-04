@@ -76,8 +76,7 @@ touch cartfile
 - Add code to Cartfile:
 
 ```
-github "3pillarlabs/ios-image-manager.git"
-
+github "3pillarlabs/ios-image-manager"
 ```
 
 - Run carthage by using command:
