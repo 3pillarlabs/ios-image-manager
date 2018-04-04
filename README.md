@@ -110,8 +110,6 @@ if let aImage =  image {
 }
 ```
 
-In the demo project you're able to see how the framework is used.        
-
 ## License
 
 iOS image manager  is released under MIT license. See [LICENSE](LICENSE) for details.  
