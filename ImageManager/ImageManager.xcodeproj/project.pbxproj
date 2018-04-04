@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B557C7051C219DEA0049AFE8 /* ImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = B557C7041C219DEA0049AFE8 /* ImageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B557C70C1C219DEA0049AFE8 /* ImageManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B557C7011C219DEA0049AFE8 /* ImageManager.framework */; };
-		B557C7111C219DEA0049AFE8 /* ImageManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B557C7101C219DEA0049AFE8 /* ImageManagerTests.swift */; };
 		B557C71F1C219E420049AFE8 /* ImageManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B557C71B1C219E420049AFE8 /* ImageManagerViewController.swift */; };
 		B557C7201C219E420049AFE8 /* ImageManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B557C71C1C219E420049AFE8 /* ImageManagerViewController.xib */; };
 		B557C7211C219E420049AFE8 /* UIImage+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B557C71D1C219E420049AFE8 /* UIImage+Utils.swift */; };
@@ -17,23 +15,10 @@
 		B5B4447F1C21B8780035A45E /* ImageManagerViewController.swift in Headers */ = {isa = PBXBuildFile; fileRef = B557C71B1C219E420049AFE8 /* ImageManagerViewController.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		B557C70D1C219DEA0049AFE8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B557C6F81C219DEA0049AFE8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B557C7001C219DEA0049AFE8;
-			remoteInfo = ImageManager;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		B557C7011C219DEA0049AFE8 /* ImageManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B557C7041C219DEA0049AFE8 /* ImageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageManager.h; sourceTree = "<group>"; };
 		B557C7061C219DEA0049AFE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B557C70B1C219DEA0049AFE8 /* ImageManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B557C7101C219DEA0049AFE8 /* ImageManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManagerTests.swift; sourceTree = "<group>"; };
-		B557C7121C219DEA0049AFE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B557C71B1C219E420049AFE8 /* ImageManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManagerViewController.swift; sourceTree = "<group>"; };
 		B557C71C1C219E420049AFE8 /* ImageManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageManagerViewController.xib; sourceTree = "<group>"; };
 		B557C71D1C219E420049AFE8 /* UIImage+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Utils.swift"; sourceTree = "<group>"; };
@@ -48,14 +33,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B557C7081C219DEA0049AFE8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B557C70C1C219DEA0049AFE8 /* ImageManager.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -63,7 +40,6 @@
 			isa = PBXGroup;
 			children = (
 				B557C7031C219DEA0049AFE8 /* ImageManager */,
-				B557C70F1C219DEA0049AFE8 /* ImageManagerTests */,
 				B557C7021C219DEA0049AFE8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,7 +48,6 @@
 			isa = PBXGroup;
 			children = (
 				B557C7011C219DEA0049AFE8 /* ImageManager.framework */,
-				B557C70B1C219DEA0049AFE8 /* ImageManagerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,15 +63,6 @@
 				B557C7061C219DEA0049AFE8 /* Info.plist */,
 			);
 			path = ImageManager;
-			sourceTree = "<group>";
-		};
-		B557C70F1C219DEA0049AFE8 /* ImageManagerTests */ = {
-			isa = PBXGroup;
-			children = (
-				B557C7101C219DEA0049AFE8 /* ImageManagerTests.swift */,
-				B557C7121C219DEA0049AFE8 /* Info.plist */,
-			);
-			path = ImageManagerTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,24 +98,6 @@
 			productReference = B557C7011C219DEA0049AFE8 /* ImageManager.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B557C70A1C219DEA0049AFE8 /* ImageManagerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B557C7181C219DEA0049AFE8 /* Build configuration list for PBXNativeTarget "ImageManagerTests" */;
-			buildPhases = (
-				B557C7071C219DEA0049AFE8 /* Sources */,
-				B557C7081C219DEA0049AFE8 /* Frameworks */,
-				B557C7091C219DEA0049AFE8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B557C70E1C219DEA0049AFE8 /* PBXTargetDependency */,
-			);
-			name = ImageManagerTests;
-			productName = ImageManagerTests;
-			productReference = B557C70B1C219DEA0049AFE8 /* ImageManagerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -161,9 +109,6 @@
 				ORGANIZATIONNAME = "3Pillar Global";
 				TargetAttributes = {
 					B557C7001C219DEA0049AFE8 = {
-						CreatedOnToolsVersion = 7.1;
-					};
-					B557C70A1C219DEA0049AFE8 = {
 						CreatedOnToolsVersion = 7.1;
 					};
 				};
@@ -181,7 +126,6 @@
 			projectRoot = "";
 			targets = (
 				B557C7001C219DEA0049AFE8 /* ImageManager */,
-				B557C70A1C219DEA0049AFE8 /* ImageManagerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -192,13 +136,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B557C7201C219E420049AFE8 /* ImageManagerViewController.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B557C7091C219DEA0049AFE8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,23 +152,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B557C7071C219DEA0049AFE8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B557C7111C219DEA0049AFE8 /* ImageManagerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B557C70E1C219DEA0049AFE8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B557C7001C219DEA0049AFE8 /* ImageManager */;
-			targetProxy = B557C70D1C219DEA0049AFE8 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B557C7131C219DEA0049AFE8 /* Debug */ = {
@@ -388,26 +309,6 @@
 			};
 			name = Release;
 		};
-		B557C7191C219DEA0049AFE8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = ImageManagerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-PG.ImageManagerTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		B557C71A1C219DEA0049AFE8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = ImageManagerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-PG.ImageManagerTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -425,15 +326,6 @@
 			buildConfigurations = (
 				B557C7161C219DEA0049AFE8 /* Debug */,
 				B557C7171C219DEA0049AFE8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B557C7181C219DEA0049AFE8 /* Build configuration list for PBXNativeTarget "ImageManagerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B557C7191C219DEA0049AFE8 /* Debug */,
-				B557C71A1C219DEA0049AFE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
