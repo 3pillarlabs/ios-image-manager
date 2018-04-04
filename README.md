@@ -29,7 +29,7 @@ The purpose of the framework is to provide a simple in app solution for basic im
 ## Installation
 
 
-Available in iOS 9.0 and later.
+Available in iOS 8.0 and later.
 
 ### CocoaPods
 
@@ -46,7 +46,7 @@ pod init
 - Add code to podfile
 
 ```
-platform :ios, '9.0'
+platform :ios, '8.0'
 
 target 'YourProjectName' do
   use_frameworks!
