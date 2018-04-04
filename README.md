@@ -108,9 +108,7 @@ if let aImage =  image {
   imageManagerVc.displayedImage = image
   // present the image manager view controller in the way that it makes sense in your application
 }
-```
-
-In the demo project you're able to see how the framework is used.        
+```  
 
 ## License
 
